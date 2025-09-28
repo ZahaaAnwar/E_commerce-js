@@ -32,7 +32,7 @@ function ShowHamburgerMenu() {
     `
     document.getElementById("Hamburger").appendChild(links)
 
-    // Close menu when clicking outside
+    
     document.addEventListener("click", function handleClickOutside(event) {
         const menu = document.getElementById("hamburgerMenu")
         const button = document.querySelector("#Hamburger")
@@ -42,3 +42,6 @@ function ShowHamburgerMenu() {
         }
     })
 }
+document.getElementById('browse').addEventListener('click',() =>{
+    window.location.href='index.html'
+})
