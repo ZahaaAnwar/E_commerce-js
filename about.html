@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
 <body>
     <!--header  -->
@@ -26,23 +27,23 @@
       <!-- right side portion  -->
      <div class="flex gap-2">
         <div class="font-medium text-blue-700 text-3xl">
-        <a href="./wishlist.html"> <i class="fa-solid fa-bag-shopping relative"><div id="countWish" class="w-[20px] h-[20px] p-[5px] text-[10px] absolute -top-4 -right-2 bg-blue-900 text-white rounded-[50%]">1</div></i></a>
+          <a href="./wishlist.html"> <i class="fa-solid fa-bag-shopping relative"><div id="countWish" class="w-[20px] h-[20px] p-[5px] text-[10px] absolute -top-4 -right-2 bg-blue-900 text-white rounded-[50%]">1</div></i></a>
         </div>
         <div class="font-medium text-blue-700 text-3xl">
          <a href="./cart.html"> <i class="fa-solid fa-cart-shopping relative"><div id="countCart" class="w-[20px] h-[20px] absolute p-[5px] text-[10px] -top-4 -right-2 bg-blue-900 text-white rounded-[50%]"j>1</div></i></a>
         </div>
-        <div class="bg-blue-800 text-white p-[10px] rounded-md max-[850px]:hidden hover:bg-amber-400 ">
+        <div class="bg-blue-800 text-white p-[10px] rounded-md max-[850px]:hidden">
           <a href="./dashboard.html"><button>Admission Dashboard</button></a>
         </div>
         <!-- Hamburger -->
         <button id="Hamburger" class="min-[851px]:hidden" onclick="ShowHamburgerMenu()"><i class="fa-solid fa-bars text-2xl"></i></button>
-      </div> 
       </div>
+      
+    </div>
+
     <!-- heading -->
-      <h1
-      class="text-4xl font-bold m-auto w-full flex justify-center items-center p-[30px] gap-[5px]"
-    >
-      About   <span class="text-blue-500">  E-Commerce</span>
+    <h1 class="text-3xl font-bold m-auto w-full flex justify-center items-center p-[30px] gap-[5px] max-[850]:text-[8vw]">
+        About<span class="text-blue-500 max-[850]:text-[8vw]">E-Commerce</span>
     </h1>
     <!-- paragraph -->
      <div class="w-full  ">
@@ -79,7 +80,7 @@
        <div class="w-full flex flex-col justify-center items-center gap-[20px]">
         <h1 class="font-medium text-2xl">Start Shopping Now!</h1>
         <p class="text-center">Explore our wide range of products and enjoy an amazing shopping experience.Browse Products</p>
-        <button class="bg-blue-700 text-white p-[15px] rounded-md w-[200px]">Browse Products</button>
+        <button class="bg-blue-700 text-white p-[15px] rounded-md w-[200px]" id="browse">Browse Products</button>
        </div>
 
 
