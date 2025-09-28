@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+     <!--header  -->
+    <div class="p-[20px] flex justify-between border-2 border-black">
+      <!-- div for left -->
+      <div class="flex gap-2">
+        <div class="text-blue-900 text-4xl">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      <a href="./index.html"><div class="font-medium text-4xl max-[500px]:hidden">E-Commerce</div></a>
+      </div>
+      <!-- mid portion -->
+      <div class="flex gap-[20px] justify-center items-center max-[850px]:hidden">
+        <a href="./index.html" class="text-2">Home</a>
+        <a href="./about.html">About</a> 
+        <a href="./contact.html">Contact</a>
+      </div>
+      <!-- right side portion  -->
+      <div class="flex gap-2">
+        <div class="font-medium text-blue-700 text-3xl">
+         <a href="./wishlist.html"> <i class="fa-solid fa-bag-shopping relative"><div id="countWish" class="w-[20px] h-[20px] p-[5px] text-[10px] absolute -top-4 -right-2 bg-blue-900 text-white rounded-[50%]">1</div></i></a>
+        </div>
+        <div class="font-medium text-blue-700 text-3xl">
+         <a href="./cart.html"> <i class="fa-solid fa-cart-shopping relative"><div id="countCart" class="w-[20px] h-[20px] absolute p-[5px] text-[10px] -top-4 -right-2 bg-blue-900 text-white rounded-[50%]"j>1</div></i></a>
+        </div>
+        <div class="bg-blue-800 text-white p-[10px] rounded-md max-[850px]:hidden hover:bg-amber-400 ">
+          <a href="./dashboard.html"><button>Admission Dashboard</button></a>
+        </div>
+        <!-- Hamburger -->
+        <button id="Hamburger" class="min-[851px]:hidden" onclick="ShowHamburgerMenu()"><i class="fa-solid fa-bars text-2xl"></i></button>
+      </div>
+      
+    </div>
+<!-- parent -->
+    <div class="w-full flex gap-[10px]">
+        <!-- left -->
+        <div class="w-[30%] flex flex-col gap-[25px] p-[20px] bg-gray-400 h-[500px] max-[740px]:hidden">
+             
+              <h1 class="text-2xl gap-[5px] "><i class="fa-brands fa-windows text-2xl mr-[5px]"></i>Dashboard</h1>
+              <a href="./addproduct.html">              <h1 class="text-2xl gap-[5px] "><i class="fa-solid fa-bag-shopping text-2xl mr-[5px]"></i>Add Product</h1></a>
+              <a href="./viewproduct.html">              <h1 class="text-2xl gap-[5px] "><i class="fa-solid fa-bars text-2xl mr-[5px]"></i>View Product</h1></a>
+              <button id="logout" 
+    class="flex items-center gap-[5px] bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">
+    <i class="fa-solid fa-arrow-right-from-bracket text-xl"></i>
+    Logout
+</button>
+
+              
+              
+
+         
+
+            
+        </div>
+        <i class="fa-solid fa-bars min-[741px]:hidden text-2xl"></i>
+        <!-- right -->
+        <div class="w-[70%] flex gap-[20px] justify-center items-center max-[740px]:flex-col max-[740px]:m-auto  max-[740px]:pt-[20px]">
+           <div class="w-[40%] rounded-md shadow shadow-gray-400 border-0 border-black p-[20px]  text-center max-[740px]:w-[95%] ">
+            <h1 class="font-bold pt-[30px]">Manage  Product</h1>
+            <p class="text-gray-500">View, edit,Delete in your memory</p>
+           </div>
+           <div class="w-[40%] rounded-md shadow shadow-gray-400 border-0 border-black p-[20px] text-center max-[740px]:w-[95%]">
+    <h1 class="font-bold pt-[30px]">Manage Product</h1>
+    <p class="text-gray-500">View, edit, Delete in your memory</p>
+</div>
+
+        </div> 
+    </div>
+    <!-- footer -->
+     <div class="w-full bg-blue-950 text-white flex justify-between p-[20px] mt-3.5 max-[800px]:flex-col max-[800px]:gap-[20px]">
+        <div class="w-[20%] max-[800px]:w-[90%]">
+            <h1 class="font-bold text-2xl">E-Commerce</h1>
+            <p>Your one-stop shop for the latest trends in fashion, electronics, and lifestyle. Shop smart. Shop easy.</p>
+
+        </div>
+        
+         <div class="w-[20%] max-[800px]:w-[90%]">
+            <h1 class="font-medium text-2xl">Quick Links</h1>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Dashboard</li>
+            </ul>
+           
+        </div>
+        
+         <div class="flex flex-col gap-[10px] w-[20%] max-[800px]:w-[90%]">
+            <h1 class="font-medium text-2xl">Customer Service</h1>
+            <ul>
+                <li>Privacy Policy</li>
+                <li>Terms & Conditions</li>
+                <li>Help & Support</li>
+                
+            </ul>
+        </div>
+        
+         <div class="flex flex-col gap-[10px] w-[20%] max-[800px]:w-[90%]">
+            <h1 class="font-bold text-2xl">Contact Us</h1>
+           <div class="flex gap-[10px]">   <div class="text-blue-700"> <i class="fa-solid fa-location-dot"></i> </div>  <div><p>Lahore, Pakistan</p></div></div>
+            <div class="flex gap-[10px]">   <div class="text-blue-700"> <i class="fa-solid fa-message"></i></div>  <div><p>support@gmail.com</p></div></div>
+             <div class="flex gap-[10px]">   <div class="text-blue-700"> <i class="fa-solid fa-phone-volume"></i> </div>  <div><p>+92 312 3456789</p></div></div>
+             <div class="flex gap-[10px]">   <div class="font-bold text-2xl"><i class="fa-brands fa-instagram"></i></div>    <div class="font-bold text-2xl"><i class="fa-brands fa-twitter"></i></div>   <div class="font-bold text-2xl"><i class="fa-brands fa-github"></i></div>  </div>
+        </div>
+     </div>
+     <div class="bg-blue-950 text-white text-center  p-[20px] border-t-[1px] border-blue-600">
+      <p>© 2025 E-Commerce. All rights reserved.</p>
+    </div>
+    <script src="./login.js"></script>
+    
+</body>
+</html>
